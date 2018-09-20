@@ -758,15 +758,15 @@ class Whois:
 
         if asn_data['asn_registry'] == 'arin':
 
-            nets_response = self._get_nets_arin(response)
+            nets_response = self.get_nets_arin(response)
 
         elif asn_data['asn_registry'] == 'lacnic':
 
-            nets_response = self._get_nets_lacnic(response)
+            nets_response = self.get_nets_lacnic(response)
 
         else:
 
-            nets_response = self._get_nets_other(response)
+            nets_response = self.get_nets_other(response)
 
         nets.extend(nets_response)
 
